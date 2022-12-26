@@ -1,0 +1,153 @@
+.profile
+	padding: $profile-section-gap 0
+	&__top
+		width: 100%
+		display: grid
+		grid-template-columns: $profile-aside-width auto
+		grid-gap: $profile-grid-gap
+		margin-bottom: $profile-aside-gap
+	&__top-cat
+		margin-bottom: $profile-cat-gap
+		padding: $profile-cat-padding
+		border-radius: $profile-cat-radius
+		background: $profile-cat-background
+		color: $profile-cat-color
+		font-size: $profile-cat-font-size
+		line-height: $profile-cat-line-height
+		letter-spacing: $profile-cat-letter-spacing
+		font-weight: $profile-cat-font-weight
+		text-transform: uppercase
+		display: inline-flex
+		align-items: center
+		justify-content: center
+	&__top-name-edit
+		position: relative
+		top: -7px
+	&__top-wrapper
+		position: relative
+	&__top-desc
+	&__top-desc-edit
+		position: relative
+		display: inline-block
+		vertical-align: top
+		top: -3px
+	&__top-img
+		max-width: $profile-aside-width
+		width: 100%
+		height: $profile-image-height
+		border-radius: $profile-image-radius
+		overflow: hidden
+		position: relative
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__top-img_edit
+		&::after
+			position: absolute
+			left: 0
+			top: 0
+			content: ''
+			width: 100%
+			height: 100%
+			background: rgba(#000, .5)
+			opacity: 0
+			transition: opacity $transition
+		&:hover
+			&::after
+				opacity: 1
+	&__top-img-edit
+		position: absolute
+		z-index: 1
+		bottom: $profile-image-edit-bottom
+		right: $profile-image-edit-right
+		margin-left: 0
+	&__bottom
+		width: 100%
+		display: grid
+		grid-template-columns: $profile-aside-width auto
+		grid-gap: $profile-grid-gap
+	&__aside-edit
+		margin-bottom: $profile-aside-gap
+		display: flex
+		align-items: center
+		span
+			margin-left: $profile-aside-btn-gap
+			color: $profile-aside-btn-edit-color
+			font-size: $profile-aside-btn-edit-font-size
+			line-height: $profile-aside-btn-edit-line-height
+			font-weight: $profile-aside-btn-edit-font-weight
+			letter-spacing: $profile-aside-btn-edit-letter-spacing
+			background: $profile-aside-btn-edit-background
+			padding: $profile-aside-btn-edit-padding
+			border-radius: $profile-aside-btn-edit-radius
+			border: $profile-aside-btn-edit-border
+			&::after
+				display: inline-block
+				vertical-align: top
+				content: 'кр.'
+	&__aside-btns
+		margin-bottom: $profile-aside-gap
+		display: grid
+		grid-template-columns: repeat(1,1fr)
+		grid-gap: $profile-aside-btns-gap
+	&__aside-list
+		margin: 0
+		padding: 0
+		list-style-type: none
+		background: $profile-aside-list-background
+		padding: $profile-aside-list-padding
+		border-radius: $profile-aside-list-radius
+		border: $profile-aside-list-border
+		margin-bottom: $profile-aside-list-gap
+	&__aside-item
+		padding-bottom: $profile-aside-list-item-gap
+		margin-bottom: $profile-aside-list-item-gap
+		border-bottom: $profile-aside-list-item-border
+		&:last-child
+			border-bottom: 0
+			margin-bottom: 0
+			padding-bottom: 0
+	&__aside-link
+		display: flex
+		align-items: center
+		text-decoration: none
+		&:hover,
+		&:focus,
+		&:focus-visible
+			.profile__aside-icon,
+			.profile__aside-link-text,
+			.profile__aside-count
+				opacity: 0.9
+	&__aside-icon
+		display: flex
+		align-items: center
+		justify-content: center
+		width: $profile-aside-list-icon-width
+		height: $profile-aside-list-icon-height
+		background: $profile-aside-list-icon-background
+		border-radius: $profile-aside-list-icon-radius
+		font-size: 0
+		transition: opacity $transition
+	&__aside-link-text
+		flex: 1
+		margin-right: $profile-aside-list-link-gap
+		margin-left: $profile-aside-list-link-gap
+		font-size: $profile-aside-list-link-font-size
+		line-height: $profile-aside-list-link-line-height
+		letter-spacing: $profile-aside-list-link-letter-spacing
+		font-weight: $profile-aside-list-link-font-weight
+		color: $profile-aside-list-link-color
+		transition: opacity $transition
+	&__aside-count
+		margin-left: auto
+		font-size: $profile-aside-list-count-font-size
+		line-height: $profile-aside-list-count-line-height
+		font-weight: $profile-aside-list-count-font-weight
+		color: $profile-aside-list-count-color
+		letter-spacing: $profile-aside-list-count-letter-spacing
+		transition: opacity $transition
+	&__more
+		display: grid
+		grid-template-columns: repeat(1,1fr)
+		grid-gap: $profile-more-gap-elements 0
